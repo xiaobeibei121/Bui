@@ -8,7 +8,6 @@
     import BLoadingCircle from './circle';
     import BLoadingSnake from './snake';
     import BLoadingTripleBounce from './triple-bounce';
-
     export default {
         name: 'b-loading',
         props: {
