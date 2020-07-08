@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <!-- <router-view></router-view> -->
+        <router-view></router-view>
     </div>
 </template>
 
@@ -8,10 +8,6 @@
     export default {
         name: 'demo-mobile',
         beforeCreate () {
-            // this.$router.beforeEach((to, from, next) => {
-            //     window.parent.getLocationHash(to);
-            //     next();
-            // });
             (function (w) {
                 var d = document.documentElement;
                 var fun = function () {

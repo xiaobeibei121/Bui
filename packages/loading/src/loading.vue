@@ -1,14 +1,13 @@
 <template>
     <div class="b-loading">
-        ceshi
-        <!-- <component :is="componentName" :color="color" :size="size" :text="text"></component> -->
+        <component :is="componentName" :color="color" :size="size" :text="text"></component>
     </div>
 </template>
 
 <script>
-    // import BLoadingCircle from './circle';
-    // import VLoadingSnake from './snake';
-    // import VLoadingTripleBounce from './triple-bounce';
+    import BLoadingCircle from './circle';
+    import BLoadingSnake from './snake';
+    import BLoadingTripleBounce from './triple-bounce';
 
     export default {
         name: 'b-loading',
@@ -35,7 +34,9 @@
         },
 
         components: {
-            // BLoadingCircle
+            BLoadingCircle,
+            BLoadingSnake,
+            BLoadingTripleBounce
         }
     };
 </script>

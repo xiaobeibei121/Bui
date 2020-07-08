@@ -15,7 +15,7 @@ const resolvePath = (dir) => {
 
 let devConfig = webpackMerge(baseConfig, {
     entry: {
-        'mobile/index': resolvePath('mobile/index.js')
+        'mobile/index': resolvePath('mobile/index.js'),
         // 'document/index': resolvePath('document/index.js')
     },
     output: {

@@ -88,18 +88,6 @@ let baseConfig = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
-            },
-            {
-                test: /\.ts$/,
-                use: [
-                    'babel-loader',
-                    {
-                        loader: 'ts-loader',
-                        options: {
-                            appendTsSuffixTo: [/\.vue$/],
-                        }
-                    }
-                ]
             }
         ]
     },
