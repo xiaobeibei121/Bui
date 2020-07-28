@@ -29,6 +29,6 @@ module.exports = {
     distRootPath: path.resolve(__dirname, '../', 'dist'),
     publicPath: '/',
     server: {
-        port: port || 8080
+        port: port || 8081
     }
 };

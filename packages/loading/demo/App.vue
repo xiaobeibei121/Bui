@@ -24,6 +24,7 @@
 </template>
 
 <script>    
+    import 'src/style/base';
     import Vue from 'vue';
     import BLoading from '../index';
     Vue.use(BLoading);

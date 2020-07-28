@@ -37,21 +37,6 @@ let devConfig = webpackMerge(baseConfig, {
             entrypoints: false,
             modules: false
         },
-        // before: function (app, server) {
-        //     const chokidar = require('chokidar');
-        //     const files = [
-        //         path.join(__dirname, '../document/index.html')
-        //     ];
-        //     const options = {
-        //         followSymlinks: false,
-        //         depth: 5
-        //     };
-        //     let watcher = chokidar.watch(files, options);
-
-        //     watcher.on('all', _ => {
-        //         server.sockWrite(server.sockets, 'content-changed');
-        //     });
-        // },
         after: function () {
             open(`http://localhost:${config.server.port}/mobile/#/`);
         }

@@ -1,4 +1,14 @@
 {
+    "Basic": [
+        {
+            "name": "Button 按钮",
+            "path": "button"
+        },
+        {
+            "name": "Cover 遮罩",
+            "path": "cover"
+        }
+    ],
     "Action": [
         {
             "name": "Loading 加载中",
