@@ -1,10 +1,10 @@
 <template>
     <transition name="fade">
-        <div class="b-toast" b-if="visible" :class="className">
-            <div class="b-toast-text" :class="customClass" b-if="type === 'text'">{{message}}</div>
+        <div class="b-toast" v-if="visible" :class="className">
+            <div class="b-toast-text" :class="customClass" v-if="type === 'text'">{{message}}</div>
             <div
                 class="b-toast-text b-toast-loading"
-                b-else-if="type === 'loading'">
+                v-else-if="type === 'loading'">
                 <b-loading :type="loadingType" :size="30" color="#fff"></b-loading>
             </div>
         </div>

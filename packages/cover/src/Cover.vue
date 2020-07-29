@@ -1,26 +1,18 @@
 <template>
     <transition name="b-fade">
         <div class="b-cover"
-             b-if="currentValue"
+             v-if="value"
              @click.stop.self="closeCover"
              :class="className"
-             :style="durationTime">
+             :style="styleObj">
             <slot></slot>
         </div>
     </transition>
 </template>
 
 <script>
-    import Transform from 'src/utils/transform';
-    import { on, off } from 'src/utils/dom';
-    import Touch from 'src/mixins/touch';
-    import 'src/style/base';
-
     export default {
         name: 'b-cover',
-
-        mixins: [ Touch ],
-
         props: {
             value: Boolean,
             closeOnClickCover: {
@@ -32,45 +24,17 @@
                 type: Number,
                 default: 300
             },
-            lockScroll: {
-                type: Boolean,
-                default: true
-            },
             zIndex: {
                 type: Number | String,
                 default: 9999
             }
         },
 
-        watch: {
-            currentValue () {
-                if (this.lockScroll) {
-                    if (this.currentValue) {
-                        document.body.classList.add('b-overflow-hidden');
-                        on(document, 'touchstart', this.touchStart);
-                        on(document, 'touchmove', this.touchMove);
-                    } else {
-                        document.body.classList.remove('b-overflow-hidden');
-                        off(document, 'touchstart', this.touchStart);
-                        off(document, 'touchmove', this.touchMove);
-                    }
-                }
-            }
-        },
-
         computed: {
-            durationTime () {
+            styleObj () {
                 let style = {};
-                style[`${Transform.transitionStyleName}-duration`] = `${this.duration}ms`;
                 style.zIndex = this.zIndex;
-
                 return style;
-            },
-
-            currentValue: {
-                get () {
-                    return this.value;
-                }
             }
         },
 
